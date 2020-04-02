@@ -10,14 +10,14 @@ export default class ClickityClick extends Component {
     }
     
     handleClick = () =>  {
-      this.setState({
-        hasBeenClicked: true
-      }, () => console.log(this.state.hasBeenClicked))
+      this.setState(previousState => {
+        return toggled: !previousState.toggled
+      })
     }
     render() {
       return (
         <div>
-          <p>I have {this.state.hasBeenClicked ? null : 'not'} been clicked!</p>
+          <p>I have {this.state.hasBeenClicked ? "ON" : 'OFF'}</p>
           <button onClick={this.handleClick}>Click me!</button>
         </div>
         );
