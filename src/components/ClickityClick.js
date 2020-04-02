@@ -5,7 +5,7 @@ export default class ClickityClick extends Component {
     
     render() {
       return (
-        <div />
+        <div> Something </div>
         )
     }
   
